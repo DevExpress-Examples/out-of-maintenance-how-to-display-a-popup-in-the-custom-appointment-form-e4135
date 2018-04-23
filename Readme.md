@@ -1,0 +1,42 @@
+# How to display a popup in the custom appointment form
+
+
+<p>This example illustrates how to invoke an <a href="http://documentation.devexpress.com/#AspNet/clsDevExpressWebASPxPopupControlASPxPopupControltopic"><u>ASPxPopupControl</u></a> in the custom appointment form so that the end user can select a predefined value for a custom field. This task can be easily accomplished by adding the following markup to the UserAppointmentForm.ascx file:<br />
+</p>
+
+```aspx
+<dxe:ASPxButton ID="ASPxButton2" runat="server" AutoPostBack="False" Text="Select predefined price">
+  <ClientSideEvents Click="function(s, e) { popup.Show(); }" />
+</dxe:ASPxButton>
+...
+
+<dx:ASPxPopupControl ID="ASPxPopupControl1" runat="server" ClientInstanceName="popup" Height="87px" Width="156px" 
+    AllowDragging="true" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter" HeaderText="Predefined price">
+    <ContentCollection>
+        <dx:PopupControlContentControl runat="server">
+            <dxe:ASPxLabel ID="ASPxLabel2" runat="server" Text="Select price:" />
+            <dxe:ASPxListBox ID="ASPxListBox1" runat="server" ClientInstanceName="listBox">
+                <Items>
+                    <dxe:ListEditItem Text="10" Value="10" />
+                    <dxe:ListEditItem Text="20" Value="20" />
+                    <dxe:ListEditItem Text="30" Value="30" />
+                </Items>
+            </dxe:ASPxListBox>
+            <dxe:ASPxButton ID="ASPxButton1" runat="server" AutoPostBack="False" Text="Apply">
+                <ClientSideEvents Click="function(s, e) {   
+	popup.Hide();
+    tbField1.SetText(listBox.GetSelectedItem().value);
+}" />
+            </dxe:ASPxButton>
+        </dx:PopupControlContentControl>
+    </ContentCollection>
+</dx:ASPxPopupControl>
+
+```
+
+<p>Here is a screenshot that illustrates this functionality in action:</p><p><img src="https://raw.githubusercontent.com/DevExpress-Examples/how-to-display-a-popup-in-the-custom-appointment-form-e4135/11.1.12+/media/4796c657-3302-4d80-ba92-8e2c781e09c3.png"></p><p><strong>See Also:</strong><br />
+<a href="https://www.devexpress.com/Support/Center/p/K18145">How to modify the appointment editing form for working with custom fields (step-by-step guide)</a></p>
+
+<br/>
+
+
