@@ -51,7 +51,7 @@
 ```
 
 <p>Here is a screenshot that illustrates this functionality in action:</p><p><img src="https://raw.githubusercontent.com/DevExpress-Examples/how-to-display-a-popup-in-the-custom-appointment-form-e4135/15.2.4+/media/4796c657-3302-4d80-ba92-8e2c781e09c3.png"></p><p><strong>See Also:</strong><br />
-<a href="https://www.devexpress.com/Support/Center/p/K18145">How to modify the appointment editing form for working with custom fields (step-by-step guide)</a></p>
+<a href="http://documentation.devexpress.com/#AspNet/CustomDocument5464">How to modify the appointment editing form for working with custom fields (step-by-step guide)</a></p>
 
 <br/>
 
